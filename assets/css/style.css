@@ -73,27 +73,23 @@ p {
 .white-background {
     background: var(--white-color);
 }
-/*vai sustentar o conteúdo*/
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
     padding: 8rem 3rem 2rem 3rem;
 }
-/*tamanho da seção (tamanho do background q vai ser 100% da tela)*/
 .height-background {
     min-height: 100vh;
 }
 
 .menu {
     position: fixed;
-    /*ele sai da camada normal dos elementos então ele fica por cima dos outros e os elementos sobem
-    e top,left e right pra garantir que ele não saia do lugar se add algo*/
     top: 0;
     left: 0;
     right: 0;
-    width: 100%; /*100% de largura do viewport*/
+    width: 100%;
     border-bottom: 0.2rem solid var(--light-gray-color);
-    z-index: 1; /*ficar na camada mais acima pq quando uso transform nas fotos da gallery as fotos ficam por cima do menu*/
+    z-index: 1;
 }
 .menu-content {
     display: flex;
@@ -101,7 +97,6 @@ p {
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
-    /*o ideal seria colocar padding-top e bottom 0 aqui mas o meu já está sem vai entender pq*/
 }
 .menu h1 {
     font-size: 2.3rem;
@@ -110,12 +105,10 @@ p {
 .menu h1 a {
     color: inherit;
 }
-/*usar a ul como container do menu*/
 .menu ul {
     list-style: none;
     display: flex;
 }
-/*os links vão ser display block pra ajustar a ul usando o a, invés de ajustar o li vai ajustar o a, pq por padrão o a é display: inline ai não empurra o container pra baixo*/
 .menu ul li a {
     display: block;
     padding: 2rem;
@@ -143,14 +136,12 @@ p {
     display: none;
 }
 
-/*separando um espaço para o texto e outro para imagem com grid*/
 .intro-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
     min-height: 100vh;
 }
-/*o espaço dos textos vai ser um flex e vai ficar um elemento em baixo do outro*/
 .intro-text-content, .intro-img {
     display: flex;
     flex-flow: column wrap;
@@ -160,23 +151,19 @@ p {
     max-width: 100%;
     height: auto;
 }
-
-/*dar um display flex pra usar justify-content: center*/
 .top3-content {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    min-height: 100vh; /*o tamanho mínimo da tela é 100%, se passar disso (quando diminuir o texto e ele ocupar mais linhas ele sai da tela, se usar min-height ele aumenta o height)*/
-    max-width: 80rem; /*tamanho máximo de 800px pra segurar o container nesse tamanho*/
+    min-height: 100vh;
+    max-width: 80rem;
     text-align: center;
 }
-
-/*repetindo código aqui pq se eu quiser fazer algo diferente no conteudo da seção grid-content eu posso fazer isso mais de boa, ou se eu precisar usar aquela classe pra fazer outra coisa não influencia aqui*/
 .grid-one-content {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    min-height: 100vh; /*mesmo esquema pra caber o conteudo na tela sem causar um overflow tentando deixar todo conteudo dentro de um hight de 100vh*/
+    min-height: 100vh;
 }
 .grid-main-heading {
     margin-bottom: 1rem;
@@ -193,21 +180,17 @@ p {
 .grid h3 {
     font-size: 3rem;
     position: relative;
-    /*separar o titulo do texto e do contador*/
     padding: 0 0 2rem 6rem;
 }
-/*criar um número do lado de cada item
-posso fazer um contador na página, como vai ser na grid vou criar do lado do titulo do grid= counter-reset: grid-counter, pode ser qualquer nome, vou usar no ::before pq vem antes do elemento no caso*/
 .grid h3::before {
     counter-increment: grid-counter;
     content: counter(grid-counter);
-    /*posicionar*/
     position: absolute;
     font-size: 8rem;
     font-style: italic;
     top: -4rem;
     left: -1rem;
-    transform: rotate(5deg); /*rodar um pouco o numero do contador em 5 graus*/
+    transform: rotate(5deg);
 }
 
 .gallery-img {
@@ -216,16 +199,9 @@ posso fazer um contador na página, como vai ser na grid vou criar do lado do ti
     max-height: 36rem;
     overflow: hidden;
 }
-/*transition pra colocar efeito*/
 .gallery-img img {
     transition: all 300ms ease-in-out;
 }
-/*o transform é pra rodar, escalar, da pra fazer coisas com elemento 3D e 2D
-translate= move para uma direção (lados, cima/baixo)
-positivo: direita, positivo: baixo
-negativo: esquerda, negativo: cima
-scale() = zoom na imagem
-*/
 .gallery-img img:hover {
     transform: translate(-3%, -3%) scale(1.2) rotate(5deg);
 }
@@ -275,14 +251,13 @@ th:not(:nth-child(4)){
     gap: var(--gap);
     min-height: 100vh;
 }
-/*o espaço dos textos vai ser um flex e vai ficar um elemento em baixo do outro*/
 .intro-text-content, .intro-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-/*repetindo o código da primeiro seção porque se eu quiser mudar a area de contato como eu quiser eu posso depois*/
+
 .contact-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

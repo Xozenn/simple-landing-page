@@ -14,18 +14,11 @@
 </head>
 
 <body>
-    <!-- esse input não é um checkbox, vou colocar na role que é um button que no caso vai servir para abrir e fechar o menu 
-    quem usa leitor de tela vai falar fecha o menu
-    é bom para acessibilidade-->
     <input type="checkbox" aria-label="Close menu" role="button" id="close-menu" class="close-menu">
     <label for="close-menu" title="close-menu" class="close-menu-label"></label>
 
-    <!--Vai ser um aside pq tá ligado com a página toda, já que o menu é fixo e é um site one-page
-    vai ter um nav dentro do aside pq é um menu-->
     <aside class="menu white-background">
-        <!--dentro do menu preciso de mum container q vai ser uma section-->
         <div class="menu-content main-content" onclick="getElementById('close-menu').checked = false">
-            <!--dá pra colocar uma imagem dentro de um h1-->
             <h1>
                 <a href="#home">LOGO</a>
             </h1>
@@ -44,8 +37,6 @@
     <div class="spacing"></div>
 
     <section id="home" class="main-background height-background">
-        <!--main-content pra alinhar no meio com tamanho máximo de 1200px (120rem)
-        intro-content vai realinhar-->
         <div class="main-content intro-content">
             <div class="intro-text-content">
                 <h2>JANUARY BRINGS US FIREFOX 85</h2>
@@ -54,9 +45,6 @@
                     complete removal of Flash support from Firefox.</p>
             </div>
             <div class="intro-img">
-                <!-- svg = código que explica pro navegador como renderizar aquela imagem 
-                aqui poderia ser o código svg da imagem, é melhor pq fica mais otimizado, quando carrega o html já carrega a imagem mas fica MUITO GRANDE 
-                se o svg não se ajustar com as config de max-width: 100% e height: auto é um problema no svg, posso entrar no omg svg, arrastar o svg e em Prefer ViewBox to Width/Height, clicar em um Markup e copiar, criar um arquivo svg e salvar o código, o svg vai se adequar ao tamanho da div como se fosse as config de width e height -->
                 <img src="./assets/img/javascript.svg"
                     alt="Man holding CSS3 logo, another man holding HTML5 logo and a women pushing JavaScript logo.">
             </div>
@@ -109,7 +97,6 @@
             <h2 class="grid-main-heading">Gallery</h2>
             <p class="grid-decription">Here are some of my pics.</p>
             <div class="grid grid-gallery-responsive">
-                <!-- não posso mais usar article pq só vou ter imagens aqui -->
                 <div class="gallery-img">
                     <img src="./assets/img/gallery/1.jpg" alt="A beuatiful E-girl">
                 </div>
@@ -139,7 +126,6 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo cum neque vero voluptatibus
                 iusto, minima impedit delectus ex numquam? Ullam hic nulla laboriosam numquam omnis quod minus culpa
                 similique.</p>
-            <!--para deixar a tabela responsiva: colocar ela dentro de uma div-->
             <div class="table">
                 <table>
                     <caption>Ranking table</caption>
@@ -190,17 +176,12 @@
     </section>
 
     <section id="contact" class="main-background height-background">
-        <!--main-content pra alinhar no meio com tamanho máximo de 1200px (120rem)
-        intro-content vai realinhar-->
         <div class="main-content contact-content">
             <div class="contact-img">
                 <h2>Contact me</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima culpa nemo rem? Possimus quia
                     libero, fugit ducimus asperiores nulla natus sit totam deserunt eligendi, facere harum quibusdam
                     excepturi non.</p>
-                <!-- svg = código que explica pro navegador como renderizar aquela imagem 
-                aqui poderia ser o código svg da imagem, é melhor pq fica mais otimizado, quando carrega o html já carrega a imagem mas fica MUITO GRANDE 
-                se o svg não se ajustar com as config de max-width: 100% e height: auto é um problema no svg, posso entrar no omg svg, arrastar o svg e em Prefer ViewBox to Width/Height, clicar em um Markup e copiar, criar um arquivo svg e salvar o código, o svg vai se adequar ao tamanho da div como se fosse as config de width e height -->
                 <img src="./assets/img/contact.svg"
                     alt="Man holding CSS3 logo, another man holding HTML5 logo and a women pushing JavaScript logo.">
             </div>
@@ -210,18 +191,19 @@
                     <form action="#">
                         <input type="text" name="name" id="name" placeholder="name" required>
                         <input type="email" name="email" id="email" placeholder="email" required>
-                        <textarea name="message" id="message" cols="22" rows="8" placeholder="message" required></textarea>
-                        <!--button e submit fazem a msm coisa, mas com o button posso adicionar imagens e fazer mais coisas, essa é a única diferença, com o input é limitado-->
+                        <textarea name="message" id="message" cols="22" rows="8" placeholder="message"
+                            required></textarea>
                         <input type="submit" value="submit" class="submit-button">
                     </form>
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
 
     <a href="#" class="back-to-top">ᐳ</a>
 
-    <footer class="footer-content"><a rel="nofollow" target="_blank" href="https://github.com/Xozenn">Feito com <span class="heart">❤</span> por Petterson Ferreira.</a></footer>
+    <footer class="footer-content"><a rel="nofollow" target="_blank" href="https://github.com/Xozenn">Feito com <span
+                class="heart">❤</span> por Petterson Ferreira.</a></footer>
 
 </body>
 
