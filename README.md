@@ -1,5 +1,7 @@
 ## Simple landing page using GridLayout,FlexBox, div etc...
 
+Applying html knowledge to a simple landind page.
+
 #### You can see the site here: https://firstproject-html-css.netlify.app/
 
 ## Intro
